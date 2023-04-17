@@ -1,5 +1,5 @@
 import { ValueTransformer } from 'typeorm';
-import { isNullOrUndefined } from '../../utils';
+import { isNullOrUndefined } from '../utils/index.util';
 
 export class DecimalColumnTransformer implements ValueTransformer {
   to(data?: number | null): number | null {

@@ -1,5 +1,5 @@
+import { camelToSnakeCase } from 'src/utils/index.util';
 import { DefaultNamingStrategy } from 'typeorm';
-import { camelToSnakeCase } from 'utils';
 
 export class NamingStrategy extends DefaultNamingStrategy {
   tableName(targetName: string, userSpecifiedName: string): string {

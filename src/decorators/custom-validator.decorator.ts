@@ -28,7 +28,7 @@ import {
   ValidationOptions,
   registerDecorator,
 } from 'class-validator';
-import { isNullOrUndefined } from '../../utils';
+import { isNullOrUndefined } from '../utils/index.util';
 
 type ValidationEnumOptions<E, T> = {
   enum: E;
