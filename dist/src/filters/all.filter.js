@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AllExceptionsFilter = void 0;
 const common_1 = require("@nestjs/common");
 const core_1 = require("@nestjs/core");
+const exceptions_1 = require("../exceptions");
 let AllExceptionsFilter = class AllExceptionsFilter {
     constructor(httpAdapterHost) {
         this.httpAdapterHost = httpAdapterHost;
@@ -20,7 +21,13 @@ let AllExceptionsFilter = class AllExceptionsFilter {
         const { httpAdapter } = this.httpAdapterHost;
         const ctx = host.switchToHttp();
         const path = httpAdapter.getRequestUrl(ctx.getRequest());
+        let status = (exception === null || exception === void 0 ? void 0 : exception.status) || 500;
+        let response = exception;
         console.log(`exception at ${path}: `, exception);
+        if (exception instanceof exceptions_1.CustomException) {
+            status = exception.httpStatus;
+            response = { statusCode: exception.statusCode };
+        }
         httpAdapter.reply(ctx.getResponse(), exception, (exception === null || exception === void 0 ? void 0 : exception.status) || 500);
     }
 };

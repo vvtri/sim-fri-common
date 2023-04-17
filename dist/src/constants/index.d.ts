@@ -1,1 +1,1 @@
-export * from './regex.constant';
+export * from './global.constant';
