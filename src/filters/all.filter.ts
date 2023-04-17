@@ -1,5 +1,6 @@
 import { ArgumentsHost, Catch, ExceptionFilter } from '@nestjs/common';
 import { HttpAdapterHost } from '@nestjs/core';
+import { CustomException } from '../exceptions';
 
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
@@ -12,8 +13,15 @@ export class AllExceptionsFilter implements ExceptionFilter {
     const { httpAdapter } = this.httpAdapterHost;
     const ctx = host.switchToHttp();
     const path = httpAdapter.getRequestUrl(ctx.getRequest());
+    let status: number = exception?.status || 500;
+    let response: any = exception;
 
     console.log(`exception at ${path}: `, exception);
+
+    if (exception instanceof CustomException) {
+      status = exception.httpStatus;
+      response = { statusCode: exception.statusCode };
+    }
 
     httpAdapter.reply(ctx.getResponse(), exception, exception?.status || 500);
   }

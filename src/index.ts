@@ -3,6 +3,7 @@ export * from './decorators';
 export * from './dtos';
 export * from './entities';
 export * from './enums';
+export * from './exceptions';
 export * from './filters';
 export * from './helpers';
 export * from './module';
