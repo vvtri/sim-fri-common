@@ -23,6 +23,6 @@ export class AllExceptionsFilter implements ExceptionFilter {
       response = { statusCode: exception.statusCode };
     }
 
-    httpAdapter.reply(ctx.getResponse(), exception, exception?.status || 500);
+    httpAdapter.reply(ctx.getResponse(), exception, status || 500);
   }
 }

@@ -28,7 +28,7 @@ let AllExceptionsFilter = class AllExceptionsFilter {
             status = exception.httpStatus;
             response = { statusCode: exception.statusCode };
         }
-        httpAdapter.reply(ctx.getResponse(), exception, (exception === null || exception === void 0 ? void 0 : exception.status) || 500);
+        httpAdapter.reply(ctx.getResponse(), exception, status || 500);
     }
 };
 AllExceptionsFilter = __decorate([
