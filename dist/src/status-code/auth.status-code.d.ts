@@ -1,13 +1,12 @@
-export declare const BASE_STATUS_CODE = 1000;
 declare const AuthStatusCode: {
-    readonly INVALID_PASSWORD: number;
-    readonly INVALID_EMAIL: number;
-    readonly USER_NOT_FOUND: number;
-    readonly USER_VERIFIED: number;
-    readonly TOO_MANY_VERIFICATION_REQUEST: number;
-    readonly USER_NOT_VERIFIED: number;
-    readonly USER_EXISTED: number;
-    readonly USER_TOKEN_NOT_FOUND: number;
-    readonly INVALID_USER_TOKEN: number;
+    readonly INVALID_PASSWORD: 1001;
+    readonly INVALID_EMAIL: 1002;
+    readonly USER_NOT_FOUND: 1003;
+    readonly USER_VERIFIED: 1004;
+    readonly TOO_MANY_VERIFICATION_REQUEST: 1005;
+    readonly USER_NOT_VERIFIED: 1006;
+    readonly USER_EXISTED: 1007;
+    readonly USER_TOKEN_NOT_FOUND: 1008;
+    readonly INVALID_USER_TOKEN: 1009;
 };
 export { AuthStatusCode };
