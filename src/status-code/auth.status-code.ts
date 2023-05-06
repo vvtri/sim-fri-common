@@ -8,6 +8,8 @@ const AuthStatusCode = {
   USER_EXISTED: 1007,
   USER_TOKEN_NOT_FOUND: 1008,
   INVALID_USER_TOKEN: 1009,
+  INVALID_ACCESS_TOKEN: 1010,
+  INVALID_REFRESH_TOKEN: 1011,
 } as const;
 
 export { AuthStatusCode };

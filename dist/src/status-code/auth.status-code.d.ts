@@ -8,5 +8,7 @@ declare const AuthStatusCode: {
     readonly USER_EXISTED: 1007;
     readonly USER_TOKEN_NOT_FOUND: 1008;
     readonly INVALID_USER_TOKEN: 1009;
+    readonly INVALID_ACCESS_TOKEN: 1010;
+    readonly INVALID_REFRESH_TOKEN: 1011;
 };
 export { AuthStatusCode };
