@@ -11,4 +11,5 @@ export * from './module';
 export * from './repositories';
 export * from './status-code';
 export * from './types';
+export * from './utils';
 export * from './validators';
