@@ -1,6 +1,6 @@
 import { AudienceType, FileType, NonFunctionProperties } from 'shared';
 
-export class FileCreated {
+export class FileCreatedKafkaPayload {
   id: number;
   key: string;
   bucket: string;
@@ -9,12 +9,12 @@ export class FileCreated {
   fileType: FileType;
   userId: number;
 
-  constructor(data: NonFunctionProperties<FileCreated>) {
+  constructor(data: NonFunctionProperties<FileCreatedKafkaPayload>) {
     Object.assign(this, data);
   }
 }
 
-export class FileUpdated {
+export class FileUpdatedKafkaPayload {
   id: number;
   key: string;
   bucket: string;
@@ -23,7 +23,7 @@ export class FileUpdated {
   fileType: FileType;
   userId: number;
 
-  constructor(data: NonFunctionProperties<FileUpdated>) {
+  constructor(data: NonFunctionProperties<FileUpdatedKafkaPayload>) {
     Object.assign(this, data);
   }
 }

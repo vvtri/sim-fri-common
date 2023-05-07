@@ -1,15 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FileUpdated = exports.FileCreated = void 0;
-class FileCreated {
+exports.FileUpdatedKafkaPayload = exports.FileCreatedKafkaPayload = void 0;
+class FileCreatedKafkaPayload {
     constructor(data) {
         Object.assign(this, data);
     }
 }
-exports.FileCreated = FileCreated;
-class FileUpdated {
+exports.FileCreatedKafkaPayload = FileCreatedKafkaPayload;
+class FileUpdatedKafkaPayload {
     constructor(data) {
         Object.assign(this, data);
     }
 }
-exports.FileUpdated = FileUpdated;
+exports.FileUpdatedKafkaPayload = FileUpdatedKafkaPayload;

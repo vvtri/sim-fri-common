@@ -1,5 +1,5 @@
 import { AudienceType, FileType, NonFunctionProperties } from 'shared';
-export declare class FileCreated {
+export declare class FileCreatedKafkaPayload {
     id: number;
     key: string;
     bucket: string;
@@ -7,9 +7,9 @@ export declare class FileCreated {
     audienceType: AudienceType;
     fileType: FileType;
     userId: number;
-    constructor(data: NonFunctionProperties<FileCreated>);
+    constructor(data: NonFunctionProperties<FileCreatedKafkaPayload>);
 }
-export declare class FileUpdated {
+export declare class FileUpdatedKafkaPayload {
     id: number;
     key: string;
     bucket: string;
@@ -17,5 +17,5 @@ export declare class FileUpdated {
     audienceType: AudienceType;
     fileType: FileType;
     userId: number;
-    constructor(data: NonFunctionProperties<FileUpdated>);
+    constructor(data: NonFunctionProperties<FileUpdatedKafkaPayload>);
 }

@@ -1,6 +1,6 @@
 import { NonFunctionProperties, UserStatus } from 'shared';
 
-export class UserCreatedPayload {
+export class UserCreatedKafkaPayload {
   id: number;
   status: UserStatus;
   phoneNumber: string;
@@ -9,12 +9,12 @@ export class UserCreatedPayload {
   name: string;
   birthDate: Date;
 
-  constructor(data: NonFunctionProperties<UserCreatedPayload>) {
+  constructor(data: NonFunctionProperties<UserCreatedKafkaPayload>) {
     Object.assign(this, data);
   }
 }
 
-export class UserUpdatedPayload {
+export class UserUpdatedKafkaPayload {
   id: number;
   status: UserStatus;
   phoneNumber: string;
@@ -23,7 +23,7 @@ export class UserUpdatedPayload {
   name: string;
   birthDate: Date;
 
-  constructor(data: NonFunctionProperties<UserUpdatedPayload>) {
+  constructor(data: NonFunctionProperties<UserUpdatedKafkaPayload>) {
     Object.assign(this, data);
   }
 }
