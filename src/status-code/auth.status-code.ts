@@ -10,6 +10,7 @@ const AuthStatusCode = {
   INVALID_USER_TOKEN: 1009,
   INVALID_ACCESS_TOKEN: 1010,
   INVALID_REFRESH_TOKEN: 1011,
+  ACCESS_TOKEN_EXPIRES: 1011,
 } as const;
 
 export { AuthStatusCode };
