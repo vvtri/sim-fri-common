@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getFileTypes = exports.getFileCategory = exports.chunk = exports.syncArrayPos = exports.isNullOrUndefined = exports.camelToSnakeCase = exports.genListUniqueRandomNumber = exports.getCurrentUnixTimestamp = exports.genRandomNumber = exports.shuffle = void 0;
-const constants_1 = require("../constants");
+const shared_1 = require("shared");
 const shuffle = (array) => {
     let currentIndex = array.length;
     let randomIndex;
@@ -67,13 +67,13 @@ function chunk(input, size) {
 }
 exports.chunk = chunk;
 function getFileCategory(fileType) {
-    for (const key of Object.keys(constants_1.MapFileTypeToCategory)) {
-        if (constants_1.MapFileTypeToCategory[key].includes(fileType))
+    for (const key of Object.keys(shared_1.MapFileTypeToCategory)) {
+        if (shared_1.MapFileTypeToCategory[key].includes(fileType))
             return key;
     }
 }
 exports.getFileCategory = getFileCategory;
 function getFileTypes(fileCategory) {
-    return constants_1.MapFileTypeToCategory[fileCategory];
+    return shared_1.MapFileTypeToCategory[fileCategory];
 }
 exports.getFileTypes = getFileTypes;

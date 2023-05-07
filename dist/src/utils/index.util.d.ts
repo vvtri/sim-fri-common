@@ -1,4 +1,4 @@
-import { FileCategory, FileType } from '../enums';
+import { FileCategory, FileType } from 'shared';
 export declare const shuffle: <T = any>(array: T[]) => T[];
 export declare function genRandomNumber(min: number, max: number, isDecimal?: boolean): number;
 export declare function getCurrentUnixTimestamp(date?: Date): number;

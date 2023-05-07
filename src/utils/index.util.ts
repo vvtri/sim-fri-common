@@ -1,5 +1,4 @@
-import { MapFileTypeToCategory } from '../constants';
-import { FileCategory, FileType } from '../enums';
+import { FileCategory, FileType, MapFileTypeToCategory } from 'shared';
 
 /**
  * Fisher-Yates Shuffle.

@@ -1393,6 +1393,10 @@ sha.js@^2.4.11:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+"shared@git+https://github.com/vvtri/sim-fri-shared.git#develop":
+  version "1.0.0"
+  resolved "git+https://github.com/vvtri/sim-fri-shared.git#a533d2d3cde9cacde32d7e95cfc928b1c81c75ed"
+
 shebang-command@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"

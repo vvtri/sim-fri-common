@@ -1,5 +1,5 @@
 import { NonFunctionProperties, UserStatus } from 'shared';
-export declare class UserCreatedPayload {
+export declare class UserCreated {
     id: number;
     status: UserStatus;
     phoneNumber: string;
@@ -7,9 +7,9 @@ export declare class UserCreatedPayload {
     email: string;
     name: string;
     birthDate: Date;
-    constructor(data: NonFunctionProperties<UserCreatedPayload>);
+    constructor(data: NonFunctionProperties<UserCreated>);
 }
-export declare class UserUpdatedPayload {
+export declare class UserUpdated {
     id: number;
     status: UserStatus;
     phoneNumber: string;
@@ -17,5 +17,5 @@ export declare class UserUpdatedPayload {
     email: string;
     name: string;
     birthDate: Date;
-    constructor(data: NonFunctionProperties<UserCreatedPayload>);
+    constructor(data: NonFunctionProperties<UserCreated>);
 }

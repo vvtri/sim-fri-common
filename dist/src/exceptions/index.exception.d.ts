@@ -1,5 +1,5 @@
 import { HttpStatus } from '@nestjs/common';
-import { NonFunctionProperties } from '../types';
+import { NonFunctionProperties } from 'shared';
 export declare abstract class CustomException {
     httpStatus: HttpStatus;
     statusCode: number;
