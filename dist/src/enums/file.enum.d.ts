@@ -1,11 +1,10 @@
-export declare enum FileType {
+export declare enum FileCategory {
     IMAGE = "images",
-    PDF = "pdf",
     AUDIO = "audio",
-    EXCEL = "excel",
-    CSV = "csv"
+    DOCUMENT = "document",
+    VIDEO = "video"
 }
-export declare enum SupportFileType {
+export declare enum FileType {
     png = "png",
     jpg = "jpg",
     jpeg = "jpeg",

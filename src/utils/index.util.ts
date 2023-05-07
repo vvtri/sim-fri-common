@@ -1,3 +1,6 @@
+import { MapFileTypeToCategory } from '../constants';
+import { FileCategory, FileType } from '../enums';
+
 /**
  * Fisher-Yates Shuffle.
  * Warning: Array input will be restructured randomly
@@ -92,4 +95,14 @@ export function chunk<T = any>(input: T[], size: number): T[][] {
       ? [...arr, [item]]
       : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
   }, []);
+}
+
+export function getFileCategory(fileType: FileType): FileCategory {
+  for (const key of Object.keys(MapFileTypeToCategory) as FileCategory[]) {
+    if (MapFileTypeToCategory[key].includes(fileType)) return key;
+  }
+}
+
+export function getFileTypes(fileCategory: FileCategory): FileType[] {
+  return MapFileTypeToCategory[fileCategory];
 }

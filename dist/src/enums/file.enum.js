@@ -1,24 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SupportFileType = exports.FileType = void 0;
+exports.FileType = exports.FileCategory = void 0;
+var FileCategory;
+(function (FileCategory) {
+    FileCategory["IMAGE"] = "images";
+    FileCategory["AUDIO"] = "audio";
+    FileCategory["DOCUMENT"] = "document";
+    FileCategory["VIDEO"] = "video";
+})(FileCategory = exports.FileCategory || (exports.FileCategory = {}));
 var FileType;
 (function (FileType) {
-    FileType["IMAGE"] = "images";
-    FileType["PDF"] = "pdf";
-    FileType["AUDIO"] = "audio";
-    FileType["EXCEL"] = "excel";
-    FileType["CSV"] = "csv";
+    FileType["png"] = "png";
+    FileType["jpg"] = "jpg";
+    FileType["jpeg"] = "jpeg";
+    FileType["pdf"] = "pdf";
+    FileType["mp3"] = "mp3";
+    FileType["mp4"] = "mp4";
+    FileType["wav"] = "wav";
+    FileType["xlsx"] = "xlsx";
+    FileType["xls"] = "xls";
+    FileType["csv"] = "csv";
 })(FileType = exports.FileType || (exports.FileType = {}));
-var SupportFileType;
-(function (SupportFileType) {
-    SupportFileType["png"] = "png";
-    SupportFileType["jpg"] = "jpg";
-    SupportFileType["jpeg"] = "jpeg";
-    SupportFileType["pdf"] = "pdf";
-    SupportFileType["mp3"] = "mp3";
-    SupportFileType["mp4"] = "mp4";
-    SupportFileType["wav"] = "wav";
-    SupportFileType["xlsx"] = "xlsx";
-    SupportFileType["xls"] = "xls";
-    SupportFileType["csv"] = "csv";
-})(SupportFileType = exports.SupportFileType || (exports.SupportFileType = {}));
