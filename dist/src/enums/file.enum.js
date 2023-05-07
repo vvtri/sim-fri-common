@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FileType = exports.FileCategory = void 0;
+exports.AudienceType = exports.FileType = exports.FileCategory = void 0;
 var FileCategory;
 (function (FileCategory) {
     FileCategory["IMAGE"] = "images";
@@ -21,3 +21,9 @@ var FileType;
     FileType["xls"] = "xls";
     FileType["csv"] = "csv";
 })(FileType = exports.FileType || (exports.FileType = {}));
+var AudienceType;
+(function (AudienceType) {
+    AudienceType["ONLY_ME"] = "ONLY_ME";
+    AudienceType["FRIEND"] = "FRIEND";
+    AudienceType["PUBLIC"] = "PUBLIC";
+})(AudienceType = exports.AudienceType || (exports.AudienceType = {}));

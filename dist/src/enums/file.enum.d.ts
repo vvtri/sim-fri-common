@@ -16,3 +16,8 @@ export declare enum FileType {
     xls = "xls",
     csv = "csv"
 }
+export declare enum AudienceType {
+    ONLY_ME = "ONLY_ME",
+    FRIEND = "FRIEND",
+    PUBLIC = "PUBLIC"
+}
