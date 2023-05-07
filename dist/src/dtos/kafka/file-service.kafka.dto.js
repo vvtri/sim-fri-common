@@ -1,15 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserUpdated = exports.UserCreated = void 0;
-class UserCreated {
+exports.FileUpdated = exports.FileCreated = void 0;
+class FileCreated {
     constructor(data) {
         Object.assign(this, data);
     }
 }
-exports.UserCreated = UserCreated;
-class UserUpdated {
+exports.FileCreated = FileCreated;
+class FileUpdated {
     constructor(data) {
         Object.assign(this, data);
     }
 }
-exports.UserUpdated = UserUpdated;
+exports.FileUpdated = FileUpdated;

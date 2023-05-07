@@ -23,7 +23,7 @@ export class UserUpdatedPayload {
   name: string;
   birthDate: Date;
 
-  constructor(data: NonFunctionProperties<UserCreatedPayload>) {
+  constructor(data: NonFunctionProperties<UserUpdatedPayload>) {
     Object.assign(this, data);
   }
 }

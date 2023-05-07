@@ -1,21 +1,21 @@
-import { NonFunctionProperties, UserStatus } from 'shared';
-export declare class UserCreated {
+import { AudienceType, FileType, NonFunctionProperties } from 'shared';
+export declare class FileCreated {
     id: number;
-    status: UserStatus;
-    phoneNumber: string;
-    address: string;
-    email: string;
-    name: string;
-    birthDate: Date;
-    constructor(data: NonFunctionProperties<UserCreated>);
+    key: string;
+    bucket: string;
+    size: string;
+    audienceType: AudienceType;
+    fileType: FileType;
+    userId: number;
+    constructor(data: NonFunctionProperties<FileCreated>);
 }
-export declare class UserUpdated {
+export declare class FileUpdated {
     id: number;
-    status: UserStatus;
-    phoneNumber: string;
-    address: string;
-    email: string;
-    name: string;
-    birthDate: Date;
-    constructor(data: NonFunctionProperties<UserCreated>);
+    key: string;
+    bucket: string;
+    size: string;
+    audienceType: AudienceType;
+    fileType: FileType;
+    userId: number;
+    constructor(data: NonFunctionProperties<FileUpdated>);
 }

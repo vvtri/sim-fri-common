@@ -1,29 +1,29 @@
-import { NonFunctionProperties, UserStatus } from 'shared';
+import { AudienceType, FileType, NonFunctionProperties } from 'shared';
 
-export class UserCreated {
+export class FileCreated {
   id: number;
-  status: UserStatus;
-  phoneNumber: string;
-  address: string;
-  email: string;
-  name: string;
-  birthDate: Date;
+  key: string;
+  bucket: string;
+  size: string;
+  audienceType: AudienceType;
+  fileType: FileType;
+  userId: number;
 
-  constructor(data: NonFunctionProperties<UserCreated>) {
+  constructor(data: NonFunctionProperties<FileCreated>) {
     Object.assign(this, data);
   }
 }
 
-export class UserUpdated {
+export class FileUpdated {
   id: number;
-  status: UserStatus;
-  phoneNumber: string;
-  address: string;
-  email: string;
-  name: string;
-  birthDate: Date;
+  key: string;
+  bucket: string;
+  size: string;
+  audienceType: AudienceType;
+  fileType: FileType;
+  userId: number;
 
-  constructor(data: NonFunctionProperties<UserCreated>) {
+  constructor(data: NonFunctionProperties<FileUpdated>) {
     Object.assign(this, data);
   }
 }

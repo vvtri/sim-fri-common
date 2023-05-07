@@ -17,5 +17,5 @@ export declare class UserUpdatedPayload {
     email: string;
     name: string;
     birthDate: Date;
-    constructor(data: NonFunctionProperties<UserCreatedPayload>);
+    constructor(data: NonFunctionProperties<UserUpdatedPayload>);
 }
