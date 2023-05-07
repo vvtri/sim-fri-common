@@ -15,4 +15,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./delete-multiple.dto"), exports);
+__exportStar(require("./kafka/auth-service.kafka.dto"), exports);
 __exportStar(require("./pagination.dto"), exports);
