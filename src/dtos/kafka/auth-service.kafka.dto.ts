@@ -4,7 +4,6 @@ export class UserCreatedKafkaPayload {
   id: number;
   status: UserStatus;
   phoneNumber: string;
-  address: string;
   email: string;
 
   constructor(data: NonFunctionProperties<UserCreatedKafkaPayload>) {
@@ -17,7 +16,6 @@ export class UserUpdatedKafkaPayload {
   status: UserStatus;
   phoneNumber: string;
   address: string;
-  email: string;
 
   constructor(data: NonFunctionProperties<UserUpdatedKafkaPayload>) {
     Object.assign(this, data);
