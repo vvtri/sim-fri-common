@@ -15,7 +15,7 @@ export class UserUpdatedKafkaPayload {
   id: number;
   status: UserStatus;
   phoneNumber: string;
-  address: string;
+  email: string;
 
   constructor(data: NonFunctionProperties<UserUpdatedKafkaPayload>) {
     Object.assign(this, data);
