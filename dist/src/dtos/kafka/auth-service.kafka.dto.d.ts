@@ -5,8 +5,6 @@ export declare class UserCreatedKafkaPayload {
     phoneNumber: string;
     address: string;
     email: string;
-    name: string;
-    birthDate: Date;
     constructor(data: NonFunctionProperties<UserCreatedKafkaPayload>);
 }
 export declare class UserUpdatedKafkaPayload {
@@ -15,7 +13,5 @@ export declare class UserUpdatedKafkaPayload {
     phoneNumber: string;
     address: string;
     email: string;
-    name: string;
-    birthDate: Date;
     constructor(data: NonFunctionProperties<UserUpdatedKafkaPayload>);
 }
