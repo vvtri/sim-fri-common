@@ -36,9 +36,9 @@
     "lint-staged": "13.2.1",
     "prettier": "2.8.7",
     "prettier-plugin-organize-imports": "3.2.2",
+    "shared": "git+https://github.com/vvtri/sim-fri-shared.git#develop",
     "typeorm": "0.3.14",
-    "typescript": "5.0.4",
-    "shared": "git+https://github.com/vvtri/sim-fri-shared.git#develop"
+    "typescript": "5.0.4"
   },
   "peerDependencies": {
     "@nestjs/common": "^9.4.0",
