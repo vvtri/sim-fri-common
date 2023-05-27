@@ -14,6 +14,26 @@ export const PaginationResponse = <DataDto extends Type<unknown>>(
           {
             properties: {
               items: { type: 'array', items: { $ref: getSchemaPath(dataDto) } },
+              meta: {
+                type: 'object',
+                properties: {
+                  itemCount: { type: 'number' },
+                  totalItems: { type: 'number' },
+                  itemsPerPage: { type: 'number' },
+                  totalPages: { type: 'number' },
+                  currentPage: { type: 'number' },
+                },
+              },
+
+              links: {
+                type: 'object',
+                properties: {
+                  first: { type: 'string' },
+                  previous: { type: 'string' },
+                  next: { type: 'string' },
+                  last: { type: 'string' },
+                },
+              },
             },
           },
         ],
