@@ -16,4 +16,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./kafka/auth-service.kafka.dto"), exports);
 __exportStar(require("./kafka/file-service.kafka.dto"), exports);
+__exportStar(require("./kafka/friend-service.kafka.dto"), exports);
 __exportStar(require("./kafka/post-service.kafka.dto"), exports);
