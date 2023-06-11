@@ -130,22 +130,22 @@ type ValidationTextOptions = {
 
 export function IsValidText(
   {
-    minLength = 1,
+    minLength,
     maxLength = 255,
     required = true,
     matches,
     trim = true,
   }: ValidationTextOptions = {
     required: true,
-    minLength: 1,
     maxLength: 255,
     trim: true,
   },
 ): PropertyDecorator {
   return function (target: any, propertyKey: string | symbol): void {
     IsString()(target, propertyKey);
-    MinLength(minLength)(target, propertyKey);
-    MaxLength(maxLength)(target, propertyKey);
+    if (typeof minLength === 'number')
+      MinLength(minLength)(target, propertyKey);
+    if (typeof maxLength == 'number') MaxLength(maxLength)(target, propertyKey);
     if (trim) {
       Transform(({ value }: { value: string }) => value.trim())(
         target,

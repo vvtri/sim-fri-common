@@ -65,16 +65,17 @@ function IsValidNumberString({ required = true, maxLength } = {
     };
 }
 exports.IsValidNumberString = IsValidNumberString;
-function IsValidText({ minLength = 1, maxLength = 255, required = true, matches, trim = true, } = {
+function IsValidText({ minLength, maxLength = 255, required = true, matches, trim = true, } = {
     required: true,
-    minLength: 1,
     maxLength: 255,
     trim: true,
 }) {
     return function (target, propertyKey) {
         (0, class_validator_1.IsString)()(target, propertyKey);
-        (0, class_validator_1.MinLength)(minLength)(target, propertyKey);
-        (0, class_validator_1.MaxLength)(maxLength)(target, propertyKey);
+        if (typeof minLength === 'number')
+            (0, class_validator_1.MinLength)(minLength)(target, propertyKey);
+        if (typeof maxLength == 'number')
+            (0, class_validator_1.MaxLength)(maxLength)(target, propertyKey);
         if (trim) {
             (0, class_transformer_1.Transform)(({ value }) => value.trim())(target, propertyKey);
         }
