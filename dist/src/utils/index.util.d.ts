@@ -9,3 +9,4 @@ export declare function syncArrayPos(originArr: object[], sortArr: object[], fie
 export declare function chunk<T = any>(input: T[], size: number): T[][];
 export declare function getFileCategory(fileType: FileType): FileCategory;
 export declare function getFileTypes(fileCategory: FileCategory): FileType[];
+export declare function tryParseJson(json: string): any;

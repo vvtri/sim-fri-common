@@ -105,3 +105,11 @@ export function getFileCategory(fileType: FileType): FileCategory {
 export function getFileTypes(fileCategory: FileCategory): FileType[] {
   return MapFileTypeToCategory[fileCategory];
 }
+
+export function tryParseJson(json: string) {
+  try {
+    return JSON.parse(json);
+  } catch (error) {
+    return json;
+  }
+}

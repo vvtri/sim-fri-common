@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getFileTypes = exports.getFileCategory = exports.chunk = exports.syncArrayPos = exports.isNullOrUndefined = exports.camelToSnakeCase = exports.genListUniqueRandomNumber = exports.getCurrentUnixTimestamp = exports.genRandomNumber = exports.shuffle = void 0;
+exports.tryParseJson = exports.getFileTypes = exports.getFileCategory = exports.chunk = exports.syncArrayPos = exports.isNullOrUndefined = exports.camelToSnakeCase = exports.genListUniqueRandomNumber = exports.getCurrentUnixTimestamp = exports.genRandomNumber = exports.shuffle = void 0;
 const shared_1 = require("shared");
 const shuffle = (array) => {
     let currentIndex = array.length;
@@ -77,3 +77,12 @@ function getFileTypes(fileCategory) {
     return shared_1.MapFileTypeToCategory[fileCategory];
 }
 exports.getFileTypes = getFileTypes;
+function tryParseJson(json) {
+    try {
+        return JSON.parse(json);
+    }
+    catch (error) {
+        return json;
+    }
+}
+exports.tryParseJson = tryParseJson;
