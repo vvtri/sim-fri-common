@@ -53,6 +53,7 @@ export declare class SaveCommentReactionKafkaPayload {
     commentId: number;
     commentOwnerId: number;
     commentContent: string;
+    postId: number;
     constructor(data: NonFunctionProperties<SaveCommentReactionKafkaPayload>);
 }
 export declare class DeleteCommentReactionKafkaPayload {

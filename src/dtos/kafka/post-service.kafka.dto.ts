@@ -83,6 +83,7 @@ export class SaveCommentReactionKafkaPayload {
   commentId: number;
   commentOwnerId: number;
   commentContent: string;
+  postId: number;
 
   constructor(data: NonFunctionProperties<SaveCommentReactionKafkaPayload>) {
     Object.assign(this, data);
