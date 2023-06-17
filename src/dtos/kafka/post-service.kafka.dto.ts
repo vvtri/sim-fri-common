@@ -36,10 +36,18 @@ export class SaveCommentKafkaPayload {
   postOwnerId: number;
   createdAt: Date;
   updatedAt: Date;
+
+  constructor(data: NonFunctionProperties<SaveCommentKafkaPayload>) {
+    Object.assign(this, data);
+  }
 }
 
 export class DeleteCommentKafkaPayload {
   id: number;
+
+  constructor(data: NonFunctionProperties<DeleteCommentKafkaPayload>) {
+    Object.assign(this, data);
+  }
 }
 
 export class SavePostReactionKafkaPayload {
@@ -51,10 +59,18 @@ export class SavePostReactionKafkaPayload {
   postId: number;
   postOwnerId: number;
   postContent: string;
+
+  constructor(data: NonFunctionProperties<SavePostReactionKafkaPayload>) {
+    Object.assign(this, data);
+  }
 }
 
 export class DeletePostReactionKafkaPayload {
   id: number;
+
+  constructor(data: NonFunctionProperties<DeletePostReactionKafkaPayload>) {
+    Object.assign(this, data);
+  }
 }
 
 export class SaveCommentReactionKafkaPayload {
@@ -66,8 +82,16 @@ export class SaveCommentReactionKafkaPayload {
   commentId: number;
   commentOwnerId: number;
   commentContent: Comment;
+
+  constructor(data: NonFunctionProperties<SaveCommentReactionKafkaPayload>) {
+    Object.assign(this, data);
+  }
 }
 
 export class DeleteCommentReactionKafkaPayload {
   id: number;
+
+  constructor(data: NonFunctionProperties<DeleteCommentReactionKafkaPayload>) {
+    Object.assign(this, data);
+  }
 }

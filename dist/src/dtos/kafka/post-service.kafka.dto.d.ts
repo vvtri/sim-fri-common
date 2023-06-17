@@ -22,9 +22,11 @@ export declare class SaveCommentKafkaPayload {
     postOwnerId: number;
     createdAt: Date;
     updatedAt: Date;
+    constructor(data: NonFunctionProperties<SaveCommentKafkaPayload>);
 }
 export declare class DeleteCommentKafkaPayload {
     id: number;
+    constructor(data: NonFunctionProperties<DeleteCommentKafkaPayload>);
 }
 export declare class SavePostReactionKafkaPayload {
     id: number;
@@ -35,9 +37,11 @@ export declare class SavePostReactionKafkaPayload {
     postId: number;
     postOwnerId: number;
     postContent: string;
+    constructor(data: NonFunctionProperties<SavePostReactionKafkaPayload>);
 }
 export declare class DeletePostReactionKafkaPayload {
     id: number;
+    constructor(data: NonFunctionProperties<DeletePostReactionKafkaPayload>);
 }
 export declare class SaveCommentReactionKafkaPayload {
     id: number;
@@ -48,7 +52,9 @@ export declare class SaveCommentReactionKafkaPayload {
     commentId: number;
     commentOwnerId: number;
     commentContent: Comment;
+    constructor(data: NonFunctionProperties<SaveCommentReactionKafkaPayload>);
 }
 export declare class DeleteCommentReactionKafkaPayload {
     id: number;
+    constructor(data: NonFunctionProperties<DeleteCommentReactionKafkaPayload>);
 }

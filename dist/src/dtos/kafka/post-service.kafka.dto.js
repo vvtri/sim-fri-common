@@ -17,20 +17,38 @@ class PostUpdatedKafkaPayload extends PostCreatedKafkaPayload {
 }
 exports.PostUpdatedKafkaPayload = PostUpdatedKafkaPayload;
 class SaveCommentKafkaPayload {
+    constructor(data) {
+        Object.assign(this, data);
+    }
 }
 exports.SaveCommentKafkaPayload = SaveCommentKafkaPayload;
 class DeleteCommentKafkaPayload {
+    constructor(data) {
+        Object.assign(this, data);
+    }
 }
 exports.DeleteCommentKafkaPayload = DeleteCommentKafkaPayload;
 class SavePostReactionKafkaPayload {
+    constructor(data) {
+        Object.assign(this, data);
+    }
 }
 exports.SavePostReactionKafkaPayload = SavePostReactionKafkaPayload;
 class DeletePostReactionKafkaPayload {
+    constructor(data) {
+        Object.assign(this, data);
+    }
 }
 exports.DeletePostReactionKafkaPayload = DeletePostReactionKafkaPayload;
 class SaveCommentReactionKafkaPayload {
+    constructor(data) {
+        Object.assign(this, data);
+    }
 }
 exports.SaveCommentReactionKafkaPayload = SaveCommentReactionKafkaPayload;
 class DeleteCommentReactionKafkaPayload {
+    constructor(data) {
+        Object.assign(this, data);
+    }
 }
 exports.DeleteCommentReactionKafkaPayload = DeleteCommentReactionKafkaPayload;
