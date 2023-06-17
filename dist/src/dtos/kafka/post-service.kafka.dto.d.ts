@@ -17,9 +17,9 @@ export declare class SaveCommentKafkaPayload {
     content: string;
     postId: number;
     parentId: number;
-    parent: Comment;
     mpath?: string;
     userId: number;
+    postOwnerId: number;
     createdAt: Date;
     updatedAt: Date;
 }
@@ -33,6 +33,7 @@ export declare class SavePostReactionKafkaPayload {
     createdAt: Date;
     updatedAt: Date;
     postId: number;
+    postOwnerId: number;
     postContent: string;
 }
 export declare class DeletePostReactionKafkaPayload {
@@ -45,6 +46,7 @@ export declare class SaveCommentReactionKafkaPayload {
     createdAt: Date;
     updatedAt: Date;
     commentId: number;
+    commentOwnerId: number;
     commentContent: Comment;
 }
 export declare class DeleteCommentReactionKafkaPayload {
