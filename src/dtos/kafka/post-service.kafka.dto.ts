@@ -36,6 +36,7 @@ export class SaveCommentKafkaPayload {
   postOwnerId: number;
   createdAt: Date;
   updatedAt: Date;
+  replyUserIds: number[];
 
   constructor(data: NonFunctionProperties<SaveCommentKafkaPayload>) {
     Object.assign(this, data);

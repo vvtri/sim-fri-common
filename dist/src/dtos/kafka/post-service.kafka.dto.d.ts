@@ -22,6 +22,7 @@ export declare class SaveCommentKafkaPayload {
     postOwnerId: number;
     createdAt: Date;
     updatedAt: Date;
+    replyUserIds: number[];
     constructor(data: NonFunctionProperties<SaveCommentKafkaPayload>);
 }
 export declare class DeleteCommentKafkaPayload {
