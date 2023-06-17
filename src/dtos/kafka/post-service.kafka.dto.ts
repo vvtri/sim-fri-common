@@ -26,6 +26,29 @@ export class PostCreatedKafkaPayload {
 
 export class PostUpdatedKafkaPayload extends PostCreatedKafkaPayload {}
 
+export class SavePostReactionKafkaPayload {
+  id: number;
+  type: PostReactionType;
+  userId: number;
+  createdAt: Date;
+  updatedAt: Date;
+  postId: number;
+  postOwnerId: number;
+  postContent: string;
+
+  constructor(data: NonFunctionProperties<SavePostReactionKafkaPayload>) {
+    Object.assign(this, data);
+  }
+}
+
+export class DeletePostReactionKafkaPayload {
+  id: number;
+
+  constructor(data: NonFunctionProperties<DeletePostReactionKafkaPayload>) {
+    Object.assign(this, data);
+  }
+}
+
 export class SaveCommentKafkaPayload {
   id: number;
   content: string;
@@ -51,29 +74,6 @@ export class DeleteCommentKafkaPayload {
   }
 }
 
-export class SavePostReactionKafkaPayload {
-  id: number;
-  type: PostReactionType;
-  userId: number;
-  createdAt: Date;
-  updatedAt: Date;
-  postId: number;
-  postOwnerId: number;
-  postContent: string;
-
-  constructor(data: NonFunctionProperties<SavePostReactionKafkaPayload>) {
-    Object.assign(this, data);
-  }
-}
-
-export class DeletePostReactionKafkaPayload {
-  id: number;
-
-  constructor(data: NonFunctionProperties<DeletePostReactionKafkaPayload>) {
-    Object.assign(this, data);
-  }
-}
-
 export class SaveCommentReactionKafkaPayload {
   id: number;
   type: CommentReactionType;
@@ -82,7 +82,7 @@ export class SaveCommentReactionKafkaPayload {
   updatedAt: Date;
   commentId: number;
   commentOwnerId: number;
-  commentContent: Comment;
+  commentContent: string;
 
   constructor(data: NonFunctionProperties<SaveCommentReactionKafkaPayload>) {
     Object.assign(this, data);

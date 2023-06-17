@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DeleteCommentReactionKafkaPayload = exports.SaveCommentReactionKafkaPayload = exports.DeletePostReactionKafkaPayload = exports.SavePostReactionKafkaPayload = exports.DeleteCommentKafkaPayload = exports.SaveCommentKafkaPayload = exports.PostUpdatedKafkaPayload = exports.PostCreatedKafkaPayload = exports.PostFileCreatedKafkaPayload = void 0;
+exports.DeleteCommentReactionKafkaPayload = exports.SaveCommentReactionKafkaPayload = exports.DeleteCommentKafkaPayload = exports.SaveCommentKafkaPayload = exports.DeletePostReactionKafkaPayload = exports.SavePostReactionKafkaPayload = exports.PostUpdatedKafkaPayload = exports.PostCreatedKafkaPayload = exports.PostFileCreatedKafkaPayload = void 0;
 class PostFileCreatedKafkaPayload {
     constructor(data) {
         Object.assign(this, data);
@@ -16,18 +16,6 @@ exports.PostCreatedKafkaPayload = PostCreatedKafkaPayload;
 class PostUpdatedKafkaPayload extends PostCreatedKafkaPayload {
 }
 exports.PostUpdatedKafkaPayload = PostUpdatedKafkaPayload;
-class SaveCommentKafkaPayload {
-    constructor(data) {
-        Object.assign(this, data);
-    }
-}
-exports.SaveCommentKafkaPayload = SaveCommentKafkaPayload;
-class DeleteCommentKafkaPayload {
-    constructor(data) {
-        Object.assign(this, data);
-    }
-}
-exports.DeleteCommentKafkaPayload = DeleteCommentKafkaPayload;
 class SavePostReactionKafkaPayload {
     constructor(data) {
         Object.assign(this, data);
@@ -40,6 +28,18 @@ class DeletePostReactionKafkaPayload {
     }
 }
 exports.DeletePostReactionKafkaPayload = DeletePostReactionKafkaPayload;
+class SaveCommentKafkaPayload {
+    constructor(data) {
+        Object.assign(this, data);
+    }
+}
+exports.SaveCommentKafkaPayload = SaveCommentKafkaPayload;
+class DeleteCommentKafkaPayload {
+    constructor(data) {
+        Object.assign(this, data);
+    }
+}
+exports.DeleteCommentKafkaPayload = DeleteCommentKafkaPayload;
 class SaveCommentReactionKafkaPayload {
     constructor(data) {
         Object.assign(this, data);
