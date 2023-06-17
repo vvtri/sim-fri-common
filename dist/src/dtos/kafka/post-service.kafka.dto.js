@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DeleteReactCommentKafkaPayload = exports.SaveReactCommentKafkaPayload = exports.DeleteReactPostKafkaPayload = exports.SaveReactPostKafkaPayload = exports.DeleteCommentKafkaPayload = exports.SaveCommentKafkaPayload = exports.PostUpdatedKafkaPayload = exports.PostCreatedKafkaPayload = exports.PostFileCreatedKafkaPayload = void 0;
+exports.DeleteCommentReactionKafkaPayload = exports.SaveCommentReactionKafkaPayload = exports.DeletePostReactionKafkaPayload = exports.SavePostReactionKafkaPayload = exports.DeleteCommentKafkaPayload = exports.SaveCommentKafkaPayload = exports.PostUpdatedKafkaPayload = exports.PostCreatedKafkaPayload = exports.PostFileCreatedKafkaPayload = void 0;
 class PostFileCreatedKafkaPayload {
     constructor(data) {
         Object.assign(this, data);
@@ -22,15 +22,15 @@ exports.SaveCommentKafkaPayload = SaveCommentKafkaPayload;
 class DeleteCommentKafkaPayload {
 }
 exports.DeleteCommentKafkaPayload = DeleteCommentKafkaPayload;
-class SaveReactPostKafkaPayload {
+class SavePostReactionKafkaPayload {
 }
-exports.SaveReactPostKafkaPayload = SaveReactPostKafkaPayload;
-class DeleteReactPostKafkaPayload {
+exports.SavePostReactionKafkaPayload = SavePostReactionKafkaPayload;
+class DeletePostReactionKafkaPayload {
 }
-exports.DeleteReactPostKafkaPayload = DeleteReactPostKafkaPayload;
-class SaveReactCommentKafkaPayload {
+exports.DeletePostReactionKafkaPayload = DeletePostReactionKafkaPayload;
+class SaveCommentReactionKafkaPayload {
 }
-exports.SaveReactCommentKafkaPayload = SaveReactCommentKafkaPayload;
-class DeleteReactCommentKafkaPayload {
+exports.SaveCommentReactionKafkaPayload = SaveCommentReactionKafkaPayload;
+class DeleteCommentReactionKafkaPayload {
 }
-exports.DeleteReactCommentKafkaPayload = DeleteReactCommentKafkaPayload;
+exports.DeleteCommentReactionKafkaPayload = DeleteCommentReactionKafkaPayload;

@@ -20,39 +20,33 @@ export declare class SaveCommentKafkaPayload {
     parent: Comment;
     mpath?: string;
     userId: number;
-    userName: string;
-    avatarUrl?: string;
     createdAt: Date;
     updatedAt: Date;
 }
 export declare class DeleteCommentKafkaPayload {
     id: number;
 }
-export declare class SaveReactPostKafkaPayload {
+export declare class SavePostReactionKafkaPayload {
     id: number;
     type: PostReactionType;
     userId: number;
-    userName: string;
-    avatarUrl?: string;
     createdAt: Date;
     updatedAt: Date;
     postId: number;
     postContent: string;
 }
-export declare class DeleteReactPostKafkaPayload {
+export declare class DeletePostReactionKafkaPayload {
     id: number;
 }
-export declare class SaveReactCommentKafkaPayload {
+export declare class SaveCommentReactionKafkaPayload {
     id: number;
     type: CommentReactionType;
     userId: number;
-    userName: string;
-    avatarUrl?: string;
     createdAt: Date;
     updatedAt: Date;
     commentId: number;
     commentContent: Comment;
 }
-export declare class DeleteReactCommentKafkaPayload {
+export declare class DeleteCommentReactionKafkaPayload {
     id: number;
 }

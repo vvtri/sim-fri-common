@@ -7,9 +7,13 @@ export declare const KAFKA_TOPIC: {
     FILE_UPDATED: string;
     POST_CREATED: string;
     POST_UPDATED: string;
-    COMMENT_CREATED: string;
-    COMMENT_UPDATED: string;
+    COMMENT_SAVED: string;
+    COMMENT_DELETED: string;
     FRIEND_REQUEST_CREATED: string;
     FRIEND_REQUEST_UPDATED: string;
     FRIEND_REQUEST_DELETED: string;
+    POST_REACTION_SAVED: string;
+    POST_REACTION_DELETED: string;
+    COMMENT_REACTION_SAVED: string;
+    COMMENT_REACTION_DELETED: string;
 };

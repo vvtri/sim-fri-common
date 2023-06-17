@@ -34,8 +34,6 @@ export class SaveCommentKafkaPayload {
   parent: Comment;
   mpath?: string;
   userId: number;
-  userName: string;
-  avatarUrl?: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -44,34 +42,30 @@ export class DeleteCommentKafkaPayload {
   id: number;
 }
 
-export class SaveReactPostKafkaPayload {
+export class SavePostReactionKafkaPayload {
   id: number;
   type: PostReactionType;
   userId: number;
-  userName: string;
-  avatarUrl?: string;
   createdAt: Date;
   updatedAt: Date;
   postId: number;
   postContent: string;
 }
 
-export class DeleteReactPostKafkaPayload {
+export class DeletePostReactionKafkaPayload {
   id: number;
 }
 
-export class SaveReactCommentKafkaPayload {
+export class SaveCommentReactionKafkaPayload {
   id: number;
   type: CommentReactionType;
   userId: number;
-  userName: string;
-  avatarUrl?: string;
   createdAt: Date;
   updatedAt: Date;
   commentId: number;
   commentContent: Comment;
 }
 
-export class DeleteReactCommentKafkaPayload {
+export class DeleteCommentReactionKafkaPayload {
   id: number;
 }
