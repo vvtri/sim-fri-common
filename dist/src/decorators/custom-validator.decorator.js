@@ -77,7 +77,7 @@ function IsValidText({ minLength, maxLength = 255, required = true, matches, tri
         if (typeof maxLength == 'number')
             (0, class_validator_1.MaxLength)(maxLength)(target, propertyKey);
         if (trim) {
-            (0, class_transformer_1.Transform)(({ value }) => value.trim())(target, propertyKey);
+            (0, class_transformer_1.Transform)(({ value }) => value === null || value === void 0 ? void 0 : value.trim())(target, propertyKey);
         }
         if (matches)
             (0, class_validator_1.Matches)(matches)(target, propertyKey);
@@ -381,7 +381,7 @@ function IsValidEmail({ minLength = 1, maxLength = 255, required = true, matches
         (0, class_validator_1.MinLength)(minLength)(target, propertyKey);
         (0, class_validator_1.MaxLength)(maxLength)(target, propertyKey);
         if (trim) {
-            (0, class_transformer_1.Transform)(({ value }) => value.trim())(target, propertyKey);
+            (0, class_transformer_1.Transform)(({ value }) => value === null || value === void 0 ? void 0 : value.trim())(target, propertyKey);
         }
         if (matches)
             (0, class_validator_1.Matches)(matches)(target, propertyKey);

@@ -147,7 +147,7 @@ export function IsValidText(
       MinLength(minLength)(target, propertyKey);
     if (typeof maxLength == 'number') MaxLength(maxLength)(target, propertyKey);
     if (trim) {
-      Transform(({ value }: { value: string }) => value.trim())(
+      Transform(({ value }: { value: string }) => value?.trim())(
         target,
         propertyKey,
       );
@@ -578,7 +578,7 @@ export function IsValidEmail(
     MinLength(minLength)(target, propertyKey);
     MaxLength(maxLength)(target, propertyKey);
     if (trim) {
-      Transform(({ value }: { value: string }) => value.trim())(
+      Transform(({ value }: { value: string }) => value?.trim())(
         target,
         propertyKey,
       );
